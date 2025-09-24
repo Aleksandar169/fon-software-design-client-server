@@ -51,7 +51,6 @@ SQL scripts for schema creation are included in the project.
 - **NetBeans IDE**
 
 ## How to Run
-```bash
 1. Clone the repository.
 2. Open the project in NetBeans.
 3. Import the database schema from baza.sql(01_ServerSeminarski/database) into MySQL.
