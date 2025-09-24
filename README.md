@@ -53,10 +53,16 @@ SQL scripts for schema creation are included in the project.
 ## How to Run
 1. Clone the repository.
 2. Open the project in NetBeans.
-3. Import the database schema from baza.sql(01_ServerSeminarski/database) into MySQL.
-4. Update database connection settings in config.properties (01_ServerSeminarski/config)
-5. Add MySQL Connector/J:
+3. Build 01_CommonSeminarski:
+   - Clean and Build the project `01_CommonSeminarski`.
+   - This will generate a `.jar` file (e.g., `01_CommonSeminarski.jar`) in the `dist` folder.
+4. Add the 01_CommonSeminarski JAR to Client and Server:
+   - In NetBeans, right-click on `01_KlijentSeminarski` → Properties → Libraries → Add JAR/Folder → select `01_CommonSeminarski/dist/01_CommonSeminarski.jar`.
+   - Repeat the same for `01_ServerSeminarski`.
+4. Import the database schema from baza.sql(01_ServerSeminarski/database) into MySQL.
+5. Update database connection settings in config.properties (01_ServerSeminarski/config).
+6. Add MySQL Connector/J:
    - Download from https://dev.mysql.com/downloads/connector/j/
-   - Add the `.jar` file to the project libraries in NetBeans for all three modules (01_CommonSeminarski, 01_ClientSeminarski, 01_ServerSeminarski).
-6. Start the server.
-7. Run the client application and log in as a worker.
+   - Add the `.jar` file to the project libraries in NetBeans for module `01_ServerSeminarski`.
+7. Start the server.
+8. Run the client application and log in as a worker.
